@@ -5,16 +5,16 @@ public class Patient {
     public String geburtsdatum;
     public boolean registriert;
     public String krankengeschichte;
-    public int sozialnr;
+    public int verischertennr;
 
     //Konstruktor
-    public Patient(String vorname, String nachname, String geburtsdatum, boolean registriert, String krankengeschichte, int sozialnr) {
+    public Patient(String vorname, String nachname, String geburtsdatum, boolean registriert, String krankengeschichte, int versichertennr) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.geburtsdatum = geburtsdatum;
         this.registriert = registriert;
         this.krankengeschichte = krankengeschichte;
-        this.sozialnr = sozialnr;
+        this.verischertennr = versichertennr;
 
 
     }
@@ -34,8 +34,8 @@ public class Patient {
     public String getKrankengeschichte () {
         return krankengeschichte;
     }
-    public int getSozialnr () {
-        return sozialnr;
+    public int getVerischertennr () {
+        return verischertennr;
     }
 
 }
