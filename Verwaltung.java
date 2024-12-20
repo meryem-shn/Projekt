@@ -63,6 +63,7 @@ public class Verwaltung extends JFrame {
             //@Override
             public void keyreleased(KeyEvent e) {
                 super.keyReleased(e);
+
             }
         });
 
