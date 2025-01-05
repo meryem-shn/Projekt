@@ -2,12 +2,12 @@ import java.time.LocalDate;
 
 public class Patient {
     //Attribute
-    public String vorname;
-    public String nachname;
-    public LocalDate geburtsdatum;
-    public boolean registriert;
-    public String anamnese;
-    public int verischertennr;
+    private String vorname;
+    private String nachname;
+    private LocalDate geburtsdatum;
+    private boolean registriert;
+    private String anamnese;
+    private int versichertennr;
 
     //Konstruktor
     public Patient(String vorname, String nachname, LocalDate geburtsdatum, boolean registriert, String anamnese, int versichertennr) {
@@ -16,7 +16,7 @@ public class Patient {
         this.geburtsdatum = geburtsdatum;
         this.registriert = registriert;
         this.anamnese = anamnese;
-        this.verischertennr = versichertennr;
+        this.versichertennr = versichertennr;
 
 
     }
@@ -35,14 +35,15 @@ public class Patient {
     public String getAnamnese () {
         return anamnese;
     }
-    public void setAnamnese () {
-        this.anamnese;
+    public void setAnamnese (String anamnese) {
+        this.anamnese = anamnese;
     }
-    public void setVersichertennummer(int versichertennr) {
-        this.verischertennr () = versichertennr;
+    public void setVersichertennr(int versichertennr) {
+        this.versichertennr = versichertennr;
     }
-    public int getVerischertennr () {
-        return verischertennr;
+
+    public int getVersichertennr () {
+        return versichertennr;
     }
     //Setter Methoden
     public void setVorname(String vorname) {
