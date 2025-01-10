@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.time.LocalDate;
 
 public class Patient {
@@ -7,7 +8,7 @@ public class Patient {
     private LocalDate geburtsdatum;
     private boolean registriert;
     private String anamnese;
-    private int versichertennr;
+    private int verischertennr;
 
     //Konstruktor
     public Patient(String vorname, String nachname, LocalDate geburtsdatum, boolean registriert, String anamnese, int versichertennr) {
@@ -16,50 +17,64 @@ public class Patient {
         this.geburtsdatum = geburtsdatum;
         this.registriert = registriert;
         this.anamnese = anamnese;
-        this.versichertennr = versichertennr;
-
-
+        this.verischertennr = versichertennr;
     }
+
     public String getVorname() {
         return vorname;
     }
+
     public String getNachname() {
         return nachname;
     }
-    public LocalDate getGeburtsdatum () {
+
+    public LocalDate getGeburtsdatum() {
         return geburtsdatum;
     }
-    public boolean getRegistriert () {
+
+    public boolean getRegistriert() {
         return true;
     }
-    public String getAnamnese () {
+
+    public String getAnamnese() {
         return anamnese;
     }
-    public void setAnamnese (String anamnese) {
+
+    public void setAnamnese(String anamnese) {
         this.anamnese = anamnese;
     }
+
     public void setVersichertennr(int versichertennr) {
-        this.versichertennr = versichertennr;
+        this.verischertennr = versichertennr;
     }
 
-    public int getVersichertennr () {
-        return versichertennr;
+    public int getVerischertennr() {
+        return verischertennr;
     }
+
     //Setter Methoden
     public void setVorname(String vorname) {
-            this.vorname = vorname;
+        this.vorname = vorname;
     }
+
     public void setNachname(String nachname) {
         this.nachname = nachname;
     }
-    public void setGeburtsdatum ( LocalDate geburtsdatum) {
+
+    public void setGeburtsdatum(LocalDate geburtsdatum) {
         this.geburtsdatum = geburtsdatum;
     }
+
     //to-String Methode um die Patientendaten lesbar zu machen in einen text
     @Override
     public String toString() {
-        return "Patient: " + vorname + " " + nachname + ", Geburtsdatum: " + geburtsdatum;
+        return "Patient: " + vorname + " " + nachname +
+                ", Geburtsdatum: " + geburtsdatum +
+                ", Versicherung: " + (registriert ? "Privat" : "Gesetzlich") +
+                ", Anamnese: " + anamnese +
+                ", Versicherungsnummer: " + verischertennr;
     }
+
 }
 
 
